@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>受保护的页面</title>
+    <script>
+        function checkPassword() {
+            var user = prompt("请输入用户名:");
+            var pass = prompt("请输入密码:");
+
+            // 这里设置用户名和密码
+            if (user === "admin" && pass === "password") {
+                alert("欢迎！");
+            } else {
+                alert("用户名或密码错误！");
+                window.location.href = "https://www.example.com"; // 重定向到其他页面
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+    <h1>受保护的内容</h1>
+    <p>只有输入正确的用户名和密码才能看到这部分内容。</p>
+</body>
+</html>

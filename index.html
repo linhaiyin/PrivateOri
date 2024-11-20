@@ -62,7 +62,7 @@
             var user = document.getElementById("username").value;
             var pass = document.getElementById("password").value;
 
-            if (user === "herry" && pass === "12345678") {
+            if (user === "admin" && pass === "password") {
                 document.getElementById('loginModal').style.display = 'none'; // 关闭登录模态框
                 showWelcomeMessage(); // 显示欢迎消息
             } else {
@@ -75,14 +75,16 @@
             document.getElementById('welcomeModal').style.display = 'flex';
         }
 
+        // 跳转到欢迎页面
+        function redirectToWelcome() {
+            document.getElementById('welcomeModal').style.display = 'none'; // 先隐藏模态框
+            window.location.href = "welcome.html"; // 然后跳转到欢迎页面
+        }
+
         // 页面加载时显示登录模态框
         window.onload = function() {
             showModal();
         }
-          // 跳转到欢迎页面
-        function redirectToWelcome() {
-            document.getElementById('welcomeModal').style.display = 'none'; // 先隐藏模态框
-            window.location.href = "welcome.html"; // 然后跳转到欢迎页面
     </script>
 </head>
 <body>

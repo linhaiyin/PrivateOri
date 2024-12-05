@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>回来了</title>
+    <title>QAQ欢迎回家主人</title>
     <style>
+        /* 保持原有的 CSS 样式不变 */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -17,14 +18,14 @@
         }
         .image-container {
             display: flex;
-            justify-content: center; /* 居中对齐 */
+            justify-content: center;
             width: 100%;
             margin-top: 20px;
-            gap: 40px; /* 使用 gap 添加间距 */
+            gap: 40px;
         }
         .image-link {
             text-align: center;
-            margin: 0 20px; /* 左右添加 margin */
+            margin: 0 20px;
         }
         img {
             max-width: 200px;
@@ -53,5 +54,21 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // 存储原始标题
+        const originalTitle = document.title;
+
+        // 监听页面可见性变化
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // 页面隐藏时（用户切换到其他标签或窗口）
+                document.title = 'QAQ等你回家主人';
+            } else {
+                // 页面可见时（用户返回此页面）
+                document.title = originalTitle;
+            }
+        });
+    </script>
 </body>
 </html>

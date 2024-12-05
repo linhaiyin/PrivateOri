@@ -10,31 +10,46 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* 垂直排列 */
+            flex-direction: column;
             height: 100vh;
             background-color: #e7f3fe;
             margin: 0;
         }
-        a {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #007BFF; /* 超链接颜色 */
-            text-decoration: none; /* 不显示下划线 */
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
         }
-        a:hover {
-            text-decoration: underline; /* 悬停时显示下划线 */
+        .image-link {
+            text-align: center;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <div>
-
         <h1>欢迎回来，主人！！！</h1>
-        <!-- 网址的说明 -->
-        <p>如果您想要看免费视频</p>
-        <!-- 超链接到ty1010 -->
-        <a href="https://ty1010.com/" target="_blank">欢迎进入1010</a>
-        <a href="https://www.mwcy.net/show/" target="_blank">欢迎进入动漫频道</a>
+        <p>点击下方图片进入相应网站</p>
+        <div class="image-container">
+            <a href="https://ty1010.com/" target="_blank" class="image-link">
+                <img src="1010.png" alt="1010网站">
+                <p>1010网站</p>
+            </a>
+            <a href="https://www.mwcy.net/show/" target="_blank" class="image-link">
+                <img src="dm.png" alt="动漫频道">
+                <p>动漫频道</p>
+            </a>
+        </div>
     </div>
 </body>
 </html>
